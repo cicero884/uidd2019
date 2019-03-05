@@ -1,0 +1,16 @@
+body{
+	background-color:#993399;
+	color:#FFF;
+	font-weight:bold;
+	font-family: "Sans", Times, serif;
+}
+ul{
+	background-color:#FFF;
+	color:#000
+}
+.unremove{
+	text-decoration: none;
+}
+.remove{
+	text-decoration: line-through;
+}
