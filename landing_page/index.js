@@ -79,7 +79,7 @@ function setBackground(){
     R = (Rx+Ry)/1.5;
     ctx.beginPath();
     ctx.arc(Rx, Ry, R, 0, 2 * Math.PI, false);
-    ctx.lineWidth = Math.sqrt(Rx+Ry)*5;
+    ctx.lineWidth = Rx/11;
     ctx.strokeStyle = '#DDD';
     ctx.stroke();
     //draw line
@@ -98,8 +98,8 @@ function setBackground(){
     let Px=findCircleLineIntersections(R,Rx,Ry,a,b);
     let Py=[a*Px[0]+b,a*Px[1]+b];
     ctx.beginPath();
-    ctx.arc(Px[0], Py[0], Math.sqrt(Rx+Ry)*7, 0, 2 * Math.PI, false);
-    ctx.arc(Px[1], Py[1], Math.sqrt(Rx+Ry)*7, 0, 2 * Math.PI, false);
+    ctx.arc(Px[0], Py[0], Rx/8, 0, 2 * Math.PI, false);
+    ctx.arc(Px[1], Py[1], Rx/8, 0, 2 * Math.PI, false);
     ctx.fillStyle='#AAA';
     ctx.fill();
     //set track
@@ -113,7 +113,7 @@ function setBackground(){
     let angle=Math.atan2(Py[0]-Ry,Px[0]-Rx);
     origionAngle=angle;
     for(let i=0;i<length;++i){
-        track_icons[i].style.width=Math.sqrt(Rx+Ry)*7+'px';
+        track_icons[i].style.width=Rx/8+'px';
         track_icons[i].style.height='auto';
         track_icons[i].style.left=(R-track_icons[i].offsetWidth/2+R*Math.cos(angle))+'px';
         track_icons[i].style.top=(R-track_icons[i].offsetHeight/2+R*Math.sin(angle))+'px';
