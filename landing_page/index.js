@@ -50,12 +50,14 @@ function subRotate(){
 }
 function adjustShow(){
     let index=Math.round(rotateAngle/(360/track_icons.length));
+    console.log(index);
     let angle=index*(360/track_icons.length);
     TweenMax.to(track,1,{rotation:-angle})
     for(let i=0;i<track_icons.length;++i){
         TweenMax.fromTo(track_icons[i],1,{rotation:rotateAngle},{rotation:angle});
     }
-    index+=(index<0)? icons.length:0;
+    index+=icons.length;
+    index%=icons.length;
     body.removeChild(button);
     button=icons[index];
     body.removeChild(title);
