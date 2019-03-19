@@ -1,3 +1,64 @@
 body{
-	/*background-image:url("image/background.png");*/
+    position:absolute;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    z-index:0;
+}
+#background{
+    position:absolute;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    z-index:1;
+}
+#track{
+    position: absolute;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    z-index:10;
+}
+.icon{
+    position: absolute;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    z-index:100;
+}
+.title_div{
+    position:absolute;
+    color:#000;
+    font-family:"impact";
+    font:bold;
+    z-index:24;
+}
+.title{
+    position:relative;
+    color:#BBB;
+    font-family:"impact";
+    font:bold;
+    z-index:25;
+}
+.button{
+    position: absolute;
+}
+.page{
+    position: absolute;
+    z-index:20;
+}
+.pageBackground{
+    position:absolute;
+    background:#CCC;
+    z-index:21;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
