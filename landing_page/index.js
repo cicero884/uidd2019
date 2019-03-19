@@ -30,7 +30,8 @@ var track = document.getElementById('track');
 Draggable.create(track, {
     type:"rotation",
     onDrag:subRotate,
-    onDragEnd:adjustShow
+    onDragEnd:adjustShow,
+    onDragStart:startDrag
 });
 for(let i=0;i<icons.length*2;++i){
     track.appendChild(icons[i%icons.length].cloneNode(true));
@@ -66,6 +67,10 @@ function adjustShow(){
     body.appendChild(title);
     TweenMax.fromTo(button,1,{opacity:0},{opacity:1});
     TweenMax.fromTo(title,1,{opacity:0},{opacity:1});
+}
+function startDrag(){
+    TweenMax.fromTo(button,0.5,{opacity:1},{opacity:0});
+    TweenMax.fromTo(title,0.5,{opacity:1},{opacity:0});
 }
 function setBackground(){
     var canvas = document.getElementById('background');
